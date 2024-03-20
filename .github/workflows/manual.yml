@@ -34,6 +34,6 @@ jobs:
         temp="prices"
         title1="Example Post"
         curl "https://api.coinbase.com/v2/$temp/ETH-USD/buy"
-        curl -X POST -H "Content-Type: application/json" -d '{"userId": 1, "title": "'$title1'", "body": "This is the body of the example post."}' https://jsonplaceholder.typicode.com/posts
+        curl -X POST -H "Content-Type: application/json" -d "{\"userId\": 1, \"title\": \"$title1\", \"body\": \"This is the body of the example post.\"}" https://jsonplaceholder.typicode.com/posts
 
       
