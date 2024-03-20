@@ -29,4 +29,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      shell: bash
+      run: |
+        temp="prices"
+        curl "https://api.coinbase.com/v2/$temp/ETH-USD/buy"
+      
